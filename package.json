@@ -15,7 +15,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docker:build": "podman build -t fibras-chatbot .",
+    "docker:run": "podman run -p 3000:3000 fibras-chatbot",
+    "deploy:build": "gcloud builds submit --tag gcr.io/ai-nativeframework/fibras-front --project ai-nativeframework",
+    "deploy:run": "gcloud beta run deploy --image gcr.io/ai-nativeframework/fibras-front --platform managed"
   },
   "eslintConfig": {
     "extends": [

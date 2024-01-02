@@ -1,6 +1,12 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Use NVM to manage your node version, this project uses node v16.20.0
+
+## Requirements
+- Node `16.20.2`
+- gcloud CLI
+- env variables: `export CLOUDSDK_CORE_PROJECT=ai-nativeframework`
 
 ## Available Scripts
 
