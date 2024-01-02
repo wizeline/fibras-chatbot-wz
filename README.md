@@ -7,6 +7,7 @@ Use NVM to manage your node version, this project uses node v16.20.0
 - Node `16.20.2`
 - gcloud CLI
 - env variables: `export CLOUDSDK_CORE_PROJECT=ai-nativeframework`
+- Docker, podman or similar tools
 
 ## Available Scripts
 
