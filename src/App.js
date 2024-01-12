@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          FIBRAS AI chatbot.
+      <div className="content">
+        <p className="title">
+          Invierte Inteligente con FIBRAS Bot.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Developed with React and GCP Dialogflow
-        </a>
-      </header>
+       <p className="description">
+         Descubre el futuro de las inversiones inmobiliarias con FIBRAS Bot. Asesoría personalizada y al instante para maximizar tus rendimientos. ¡Invierte como un experto hoy!
+       </p>
+      </div>
     </div>
   );
 }
