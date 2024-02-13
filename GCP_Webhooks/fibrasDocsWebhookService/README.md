@@ -28,7 +28,8 @@ Before deploying the `fibrasDocsWebhookService`, make sure you are located in th
        --trigger-http \
        --allow-unauthenticated \
        --entry-point dialogflow_request \
-       --region us-east1
+       --region us-east1 \
+       --gen2
    ```
    This command sets the function name as `fibrasDocsWebhookService`, specifies the runtime environment as Python 3.9, triggers the function via HTTP requests, allows unauthenticated access, sets the entry point to the `dialogflow_request` function, and specifies the region as `us-east1`.
 5. Remember to set the necessary environment variables in the Google Cloud project settings to ensure the function operates correctly.

@@ -28,7 +28,8 @@ Before deploying the `fibrasSitesWebhookService`, make sure you are located in t
        --trigger-http \
        --allow-unauthenticated \
        --entry-point dialogflow_request \
-       --region us-east1
+       --region us-east1 \
+       --gen2
    ```
    This command sets the function name as `fibrasSitesWebhookService`, specifies the runtime environment as Python 3.9, triggers the function via HTTP requests, allows unauthenticated access, sets the entry point to the `dialogflow_request` function, and specifies the region as `us-east1`.
 
