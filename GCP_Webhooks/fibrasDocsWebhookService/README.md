@@ -22,22 +22,26 @@ Before deploying the `fibrasDocsWebhookService`, make sure you are located in th
    ```
 4. Deploy the function to Google Cloud Functions using the following command:
    ```
-   gcloud functions deploy fibrasDocsWebhookService \
+   gcloud functions deploy fibrasDocsWebhookServiceG2 \
+       --gen2
        --project ai-nativeframework \
        --runtime python39 \
        --trigger-http \
-       --allow-unauthenticated \
        --entry-point dialogflow_request \
-       --region us-east1 \
-       --gen2
+       --region us-east1
    ```
-   This command sets the function name as `fibrasDocsWebhookService`, specifies the runtime environment as Python 3.9, triggers the function via HTTP requests, allows unauthenticated access, sets the entry point to the `dialogflow_request` function, and specifies the region as `us-east1`.
-5. Remember to set the necessary environment variables in the Google Cloud project settings to ensure the function operates correctly.
+   This command sets the function name as `fibrasDocsWebhookServiceG2`, specifies the runtime environment as Python 3.9, triggers the function via HTTP requests, sets the entry point to the `dialogflow_request` function, and specifies the region as `us-east1`.
+5. Remember to set the necessary environment variables in the Google Cloud project settings to ensure the function operates correctly:
+   ```
+   VERTEX_PROJECT_ID=
+   APP_BUILDER_PROJECT_ID=
+   SEARCH_ENGINE=
+   ENGINE_TYPE=
+   ```
 
 After running the above command, the function will be deployed and ready to handle requests from Dialogflow.
 
 ## Notes
 
 - Make sure to replace `ai-nativeframework` with your Google Cloud project ID if it differs.
-- The `--allow-unauthenticated` flag allows anyone to call the function without authentication. For production environments, consider securing your function by requiring authentication.
 - The region `us-east1` is used in the deployment command; you may choose a different region that is closer to your users or meets your latency requirements.
