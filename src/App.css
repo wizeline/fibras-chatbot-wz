@@ -33,3 +33,21 @@
   max-width: 600px;
   margin: 0 auto 2em;
 }
+
+@media screen and (max-width: 920px) {
+  .content {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    font-weight: 600 ;
+    margin-top: 8rem;
+  }
+
+  .content {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
