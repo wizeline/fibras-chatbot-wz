@@ -62,5 +62,31 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      const dfMessenger = document.querySelector("df-messenger");
+      
+      function setSpanish() {
+          dfMessenger.setAttribute("language-code", "es");
+      }
+  
+      function setEnglish() { 
+          dfMessenger.setAttribute("language-code", "en");
+      }
+  
+      window.addEventListener('df-response-received', (event) => {
+          let input_language = event.detail.raw.queryResult.parameters.user_input_language
+          let currentLanguage = event.detail.raw.queryResult.languageCode
+          if (currentLanguage !== input_language) {
+              if (input_language == "es"){
+                  setSpanish()
+              } else if (input_language == "en") {
+                  setEnglish()
+              } else {
+                  setSpanish()
+              }
+          }
+          
+      });
+    </script>
   </body>
 </html>
