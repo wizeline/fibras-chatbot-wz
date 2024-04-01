@@ -1,77 +1,63 @@
-# Getting Started with Create React App
+# FIBRAS GenAI Chatbot
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Use NVM to manage your node version, this project uses node v16.20.0
+This document serves as a comprehensive guide for setting up and deploying the Fibras GenAI Chatbot, a React-based project that integrates seamlessly with Google Cloud Platform (GCP) for the utilization of Cloud Functions. Designed to enhance user engagement through conversational AI, the Fibras GenAI Chatbot leverages the dynamic capabilities of React for the frontend and the robust infrastructure of GCP for backend processes, ensuring a smooth and responsive user experience.
 
-## Requirements
-- Node `16.20.2`
-- gcloud CLI
-- env variables: `export CLOUDSDK_CORE_PROJECT=ai-nativeframework`
-- Docker, podman or similar tools
+## Getting Started
 
-## Available Scripts
+Before diving into the deployment process, ensure you have the following prerequisites installed and set up on your system:
 
-In the project directory, you can run:
+- Node.js (v16.20.2 recommended)
+- npm (comes with Node.js)
+- Google Cloud SDK (gcloud CLI)
+- Docker, Podman, or similar containerization tools
 
-### `npm start`
+This project uses Node Version Manager (NVM) to manage Node versions. It's recommended to use Node v16.20.0 for compatibility.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setting Up the Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository to your local machine.
+2. Navigate to the project directory and run `npm install` to install all the necessary dependencies.
+3. To start the development server, run:
+   ```
+   npm start
+   ```
+   This will launch the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm test`
+## Deploying to Google Cloud Platform (GCP)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To update the deployment of the Fibras GenAI Chatbot, follow these steps:
 
-### `npm run build`
+1. Run the full deployment command:
+   ```
+   npm run full:deploy
+   ```
+   This command builds the React App, builds the Docker image, submits it to Google Cloud Build, and then deploys it to Cloud Run.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. When prompted for the Service name, the default (`fibras-front`) is used. Simply press Enter to continue.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. For the region selection, when prompted `Please specify a region:`, enter `33` to select `[33] us-east1`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After the deployment process completes, you can verify the deployment in the Google Cloud Platform Console at:
+[https://console.cloud.google.com/run/detail/us-east1/fibras-front/revisions?project=ai-nativeframework](https://console.cloud.google.com/run/detail/us-east1/fibras-front/revisions?project=ai-nativeframework)
 
-### `npm run eject`
+The project is currently deployed and accessible at the following URL:
+[https://fibras-front-7z6id7bqna-ue.a.run.app](https://fibras-front-7z6id7bqna-ue.a.run.app)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## GCP Webhooks Folder
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The `/GCP_Webhooks` folder contains Cloud Functions that are integral to the project's backend. Each function within this folder has its own README file detailing its purpose, functionality, and deployment process. Refer to these READMEs for more information on managing and deploying these functions.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Additional Information
 
-## Learn More
+For more details on React and how to work with Create React App, visit the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To learn more about deploying applications to GCP, refer to the [Google Cloud documentation](https://cloud.google.com/docs).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Contributions are welcome! Please read our contributing guidelines and submit pull requests or issues as needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the LICENSE file for details.
