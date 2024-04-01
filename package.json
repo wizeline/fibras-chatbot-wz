@@ -1,5 +1,5 @@
 {
-  "name": "fibras-chatbot-front",
+  "name": "fibras-chatbot",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +19,9 @@
     "docker:build": "podman build -t fibras-chatbot .",
     "docker:run": "podman run -d -p 8080:8080 -e PORT=8080 fibras-chatbot",
     "deploy:build": "gcloud builds submit --tag gcr.io/ai-nativeframework/fibras-front --project ai-nativeframework",
-    "deploy:run": "gcloud beta run deploy --image gcr.io/ai-nativeframework/fibras-front --platform managed  --project ai-nativeframework"
+    "deploy:run": "gcloud beta run deploy --image gcr.io/ai-nativeframework/fibras-front --platform managed  --project ai-nativeframework",
+    "full:deploy": "npm run build && npm run docker:build && npm run deploy:build && npm run deploy:run"
+
   },
   "eslintConfig": {
     "extends": [
