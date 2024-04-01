@@ -6,7 +6,7 @@ This document serves as a comprehensive guide for setting up and deploying the F
 
 Before diving into the deployment process, ensure you have the following prerequisites installed and set up on your system:
 
-- Node.js (v16.20.2 recommended)
+- Node.js (v20.10.0 recommended)
 - npm (comes with Node.js)
 - Google Cloud SDK (gcloud CLI)
 - Docker, Podman, or similar containerization tools

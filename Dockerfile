@@ -1,5 +1,5 @@
 # Stage 1: Build the app
-FROM node:16.20.2 AS build
+FROM node:20.10.0 AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
