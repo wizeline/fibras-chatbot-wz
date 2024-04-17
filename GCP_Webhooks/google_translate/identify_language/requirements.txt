@@ -17,7 +17,7 @@ google-cloud-translate==3.13.0
 googleapis-common-protos==1.62.0; python_version >= '3.7'
 grpcio==1.60.0
 grpcio-status==1.60.0
-gunicorn==21.2.0; platform_system != 'Windows'
+gunicorn==22.0.0; platform_system != 'Windows'
 idna==3.6; python_version >= '3.5'
 itsdangerous==2.1.2; python_version >= '3.7'
 jinja2==3.1.2; python_version >= '3.7'
